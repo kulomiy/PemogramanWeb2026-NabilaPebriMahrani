@@ -150,3 +150,108 @@ Riwayat → Lihat Transaksi → Cari / Filter → Lihat Status
 ## 7. Kesimpulan
 
 Wireframe SIMPUS-Mini dibuat sebagai rancangan awal sebelum proses implementasi. Wireframe mencakup halaman Login, Dashboard Petugas, Peminjaman, Pengembalian, dan Riwayat.
+
+# 8. Latihan Tambahan Opsional
+
+## 8.1 Wireframe Registrasi Anggota Baru
+
+Halaman ini digunakan oleh tamu untuk mendaftarkan diri sebagai anggota perpustakaan.
+
+```text
+┌──────────────────────────────┐
+│    Registrasi Anggota Baru   │
+│                              │
+│ Nama                         │
+│ [________________________]   │
+│                              │
+│ Alamat                       │
+│ [________________________]   │
+│                              │
+│ No. HP                       │
+│ [________________________]   │
+│                              │
+│      [ Daftar ]              │
+└──────────────────────────────┘
+```
+
+**Alur:**
+
+```text
+Registrasi
+    ↓
+Isi Data Anggota
+    ↓
+Klik Daftar
+    ↓
+Data Anggota Tersimpan
+```
+
+---
+
+## 8.2 User Flow Mencari Anggota yang Terlambat
+
+Skenario ini digunakan petugas untuk mencari anggota yang memiliki keterlambatan dalam pengembalian buku.
+
+```text
+Dashboard
+    ↓
+Riwayat
+    ↓
+Cari Anggota
+    ↓
+Periksa Data Peminjaman
+    ↓
+Cek Tanggal Jatuh Tempo
+    ↓
+Anggota Terlambat
+```
+
+Jika anggota tidak memiliki keterlambatan:
+
+```text
+Cari Anggota
+    ↓
+Periksa Data Peminjaman
+    ↓
+Tidak Ada Keterlambatan
+```
+
+---
+
+## 8.3 Edge Case Peminjaman Buku yang Sama
+
+Edge case ini terjadi ketika petugas mencoba meminjamkan buku yang sama kepada anggota yang sama, padahal buku tersebut masih dalam status dipinjam.
+
+```text
+Petugas
+    ↓
+Pilih Anggota
+    ↓
+Pilih Buku
+    ↓
+Cek Status Peminjaman
+    ↓
+Buku Masih Dipinjam?
+    │
+    ├── Ya → Tampilkan Pesan
+    │         "Buku masih dipinjam oleh anggota."
+    │
+    └── Tidak → Peminjaman Berhasil
+```
+
+**Penanganan:**
+
+Jika buku masih dalam status dipinjam oleh anggota yang sama, sistem tidak membuat transaksi peminjaman baru dan menampilkan pesan kepada petugas.
+
+Contoh:
+
+```text
+┌────────────────────────────────────┐
+│        Peminjaman Tidak Berhasil   │
+│                                    │
+│ Buku masih sedang dipinjam oleh   │
+│ anggota tersebut.                 │
+│                                    │
+│            [ OK ]                  │
+└────────────────────────────────────┘
+```
