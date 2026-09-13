@@ -1,0 +1,263 @@
+/* ===== Reset & Base ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #2b2b2b;
+    background-color: #f5f6f8;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ===== Bootstrap Navbar Custom ===== */
+
+.navbar {
+    background-color: #c8dada;
+}
+
+.navbar .navbar-brand {
+    color: #564749;
+}
+
+.navbar .nav-link {
+    color: #564749;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #8b6f72;
+}
+
+/* Tombol hamburger Bootstrap */
+
+.navbar-toggler {
+    border-color: #564749;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem rgba(86, 71, 73, 0.25);
+}
+
+
+/* ===== Main ===== */
+
+main {
+    max-width: 1000px;
+}
+
+
+/* ===== Card ===== */
+
+.card {
+    border: none;
+    border-radius: 8px;
+}
+
+.card-title {
+    color: #564749;
+    font-weight: 600;
+}
+
+
+/* ===== Ringkasan ===== */
+
+.summary-box {
+    background-color: #f3f2f2;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.summary-box h3 {
+    color: #6f5a5d;
+}
+
+.summary-box p {
+    color: #8b6f72;
+}
+
+
+/* ===== Tabel ===== */
+
+.table-header-custom {
+    background-color: #c8dada;
+}
+
+.table-header-custom th {
+    background-color: #564749;
+    color: #ffffff;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table {
+    vertical-align: middle;
+}
+
+
+/* ===== Tombol Tabel ===== */
+
+.btn-edit {
+    background-color: #d3efef;
+    color: #564749;
+    border: none;
+}
+
+.btn-edit:hover {
+    background-color: #bddcdc;
+    color: #564749;
+}
+
+.btn-detail {
+    background-color: #ffe2af;
+    color: #564749;
+    border: none;
+}
+
+.btn-detail:hover {
+    background-color: #f2d19b;
+    color: #564749;
+}
+
+.btn-hapus {
+    background-color: #f7c9d1;
+    color: #564749;
+    border: none;
+}
+
+.btn-hapus:hover {
+    background-color: #eab5bf;
+    color: #564749;
+}
+
+
+/* ===== Badge Stok ===== */
+
+.badge-tersedia {
+    background-color: #d3efdd !important;
+    color: #564749 !important;
+}
+
+.badge-kosong {
+    background-color: #f9bcc6 !important;
+    color: #564749 !important;
+}
+
+
+/* ===== Tombol Simpan ===== */
+
+.btn-primary-custom {
+    background-color: #c8dada;
+    color: #564749;
+    border: 1px solid #c8dada;
+}
+
+.btn-primary-custom:hover {
+    background-color: #b4cccc;
+    color: #564749;
+    border-color: #b4cccc;
+}
+
+
+/* ===== Search Box ===== */
+
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-box label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #564749;
+    font-weight: 600;
+}
+
+.search-box input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #cdd4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #c8dada;
+    box-shadow: 0 0 0 0.15rem rgba(200, 218, 218, 0.4);
+}
+
+
+/* ===== Form Tambah ===== */
+
+form .form-label {
+    color: #564749;
+}
+
+form .form-control,
+form .form-select {
+    border-radius: 6px;
+}
+
+form .form-control:focus,
+form .form-select:focus {
+    border-color: #c8dada;
+    box-shadow: 0 0 0 0.15rem rgba(200, 218, 218, 0.4);
+}
+
+
+/* ===== Footer ===== */
+
+footer {
+    text-align: center;
+    color: #7a8794;
+    font-size: 0.9rem;
+}
+
+
+/* ===== Responsive ===== */
+
+@media (max-width: 767px) {
+
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .table {
+        white-space: nowrap;
+    }
+
+    .search-box input {
+        max-width: 100%;
+    }
+
+    .btn-edit,
+    .btn-detail,
+    .btn-hapus {
+        margin-bottom: 0.25rem;
+    }
+}
+
+
+/* ===== Layar Besar ===== */
+
+@media (min-width: 1400px) {
+
+    main {
+        max-width: 1200px;
+    }
+}
+
