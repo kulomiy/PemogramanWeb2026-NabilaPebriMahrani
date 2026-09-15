@@ -1,0 +1,404 @@
+/* ===== Reset & Base ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #2b2b2b;
+    background-color: #f5f6f8;
+    line-height: 1.5;
+}
+
+a {
+    color: #564749;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* ===== Header & Navbar ===== */
+
+header {
+    background-color: #c8dada !important;
+    color: #564749;
+    padding: 1rem 1.5rem !important;
+}
+
+header .container {
+    max-width: 1200px;
+}
+
+.navbar-brand {
+    color: #564749 !important;
+    font-size: 1.4rem;
+}
+
+.navbar-nav {
+    gap: 1.25rem;
+}
+
+header nav a {
+    color: #564749 !important;
+    font-weight: 500;
+}
+
+header nav a:hover {
+    color: #8b6f72 !important;
+}
+
+header nav a.active {
+    color: #2b2b2b !important;
+}
+
+
+/* ===== Tombol Hamburger Bootstrap ===== */
+
+.navbar-toggler {
+    border: 1px solid #564749 !important;
+    padding: 0.35rem 0.55rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem rgba(200, 218, 218, 0.5);
+}
+
+.navbar-toggler-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+
+/* ===== Main Layout ===== */
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* ===== Summary Box ===== */
+.summary-box {
+    background-color: #f3f2f2;
+    border-radius: 8px;
+    height: 100%;
+}
+
+.summary-box h3 {
+    color: #6f5a5d;
+}
+
+.summary-box p {
+    color: #8b6f72;
+}
+
+
+/* ===== Section / Card ===== */
+
+section.card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 0 !important;
+    margin-bottom: 1.5rem;
+    border: 1px solid #d8d8d8 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+section.card .card-body {
+    padding: 1.5rem !important;
+}
+
+section h2,
+section .card-title {
+    margin-bottom: 1rem;
+    color: #564749;
+}
+
+
+/* ===== Search Box ===== */
+
+.search-box {
+    margin-bottom: 1rem;
+}
+
+.search-box label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #564749;
+    font-weight: 600;
+}
+
+.search-box input,
+#search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.55rem 0.7rem !important;
+    border: 1px solid #cdd4da !important;
+    border-radius: 6px !important;
+    font-size: 1rem;
+    background-color: #fff !important;
+}
+
+.search-box input:focus,
+#search-input:focus {
+    outline: none;
+    border-color: #c8dada !important;
+    box-shadow: 0 0 0 0.15rem rgba(200, 218, 218, 0.4) !important;
+}
+
+
+/* ===== Loading Indicator ===== */
+
+#loading-indicator {
+    color: #8b6f72 !important;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+
+/* ===== Tabel ===== */
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table.table {
+    width: 100%;
+    margin-bottom: 0;
+    border-collapse: collapse;
+    color: #2b2b2b;
+}
+
+table.table th,
+table.table td {
+    text-align: left;
+    padding: 0.65rem 0.75rem !important;
+    border-bottom: 1px solid #e2e6ea;
+    vertical-align: middle;
+}
+
+
+/* Header tabel */
+
+table.table thead,
+table.table thead.table-header-custom {
+    background-color: #564749 !important;
+    color: #fff !important;
+}
+
+table.table thead th {
+    background-color: #564749 !important;
+    color: #fff !important;
+    border-bottom: none;
+}
+
+
+/* Isi tabel */
+
+table.table tbody tr:nth-child(even) {
+    background-color: #f7f9fb !important;
+}
+
+table.table tbody tr:nth-child(odd) {
+    background-color: #fff !important;
+}
+
+table.table tbody tr:hover {
+    background-color: #eef4fa !important;
+}
+
+
+/* ===== Tombol Tabel ===== */
+
+td button,
+td .btn {
+    padding: 0.35rem 0.7rem !important;
+    margin-right: 0.35rem;
+    border: none !important;
+    border-radius: 4px !important;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+
+/* ===== Tombol Edit ===== */
+
+.btn-edit {
+    background-color: #d3efef !important;
+    color: #564749 !important;
+}
+
+.btn-edit:hover {
+    background-color: #bddcdc !important;
+    color: #564749 !important;
+}
+
+
+/* ===== Tombol Detail ===== */
+
+.btn-detail {
+    background-color: #ffe2af !important;
+    color: #564749 !important;
+}
+
+.btn-detail:hover {
+    background-color: #f2d19b !important;
+    color: #564749 !important;
+}
+
+
+/* ===== Tombol Hapus ===== */
+
+.btn-hapus {
+    background-color: #f7c9d1 !important;
+    color: #564749 !important;
+}
+
+.btn-hapus:hover {
+    background-color: #eab5bf !important;
+    color: #564749 !important;
+}
+
+
+/* ===== Form ===== */
+
+form p {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    color: #564749;
+}
+
+form input,
+form select,
+form .form-control,
+form .form-select {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.55rem 0.7rem !important;
+    border: 1px solid #cdd4da !important;
+    border-radius: 6px !important;
+    font-size: 1rem;
+    background-color: #fff !important;
+}
+
+form input:focus,
+form select:focus,
+form .form-control:focus,
+form .form-select:focus {
+    outline: none;
+    border-color: #c8dada !important;
+    box-shadow: 0 0 0 0.15rem rgba(200, 218, 218, 0.4) !important;
+}
+
+
+/* ===== Tombol Simpan ===== */
+
+form button[type="submit"],
+.btn-primary-custom {
+    background-color: #c8dada !important;
+    color: #564749 !important;
+    border: 1px solid #c8dada !important;
+    padding: 0.6rem 1.5rem !important;
+    border-radius: 4px !important;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover,
+.btn-primary-custom:hover {
+    background-color: #b4cccc !important;
+    border-color: #b4cccc !important;
+    color: #564749 !important;
+}
+
+
+/* ===== Error Validasi ===== */
+
+.error {
+    display: block;
+    color: #b85c6b;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+
+/* ===== Footer ===== */
+
+footer {
+    text-align: center;
+    padding: 1.25rem;
+    color: #7a8794 !important;
+    font-size: 0.9rem;
+}
+
+
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+
+    main {
+        padding: 0 1rem;
+    }
+
+    table {
+        white-space: nowrap;
+    }
+
+}
+
+
+/* ===== Mobile ===== */
+
+@media (max-width: 767px) {
+
+    header {
+        position: relative;
+    }
+
+    header .navbar-nav {
+        gap: 0.75rem;
+        padding-top: 1rem;
+    }
+
+    main {
+        margin-top: 1rem;
+    }
+
+    section.card .card-body {
+        padding: 1rem !important;
+    }
+
+    form input,
+    form select,
+    form .form-control,
+    form .form-select {
+        max-width: 100%;
+    }
+
+    td button {
+        margin-bottom: 0.25rem;
+    }
+
+}
+
+
+/* ===== Layar Besar ===== */
+
+@media (min-width: 1400px) {
+
+    main {
+        max-width: 1200px;
+    }
+
+}
