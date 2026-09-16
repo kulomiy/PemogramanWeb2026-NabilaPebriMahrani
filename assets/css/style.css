@@ -163,7 +163,6 @@ main {
 }
 
 /* ===== Dashboard Grid ===== */
-/* ===== Dashboard Grid (Aesthetic Update) ===== */
 .dashboard-grid {
     display: grid;
     /* Mengubah jarak agar lebih lega */
@@ -229,6 +228,53 @@ main {
     color: #59000A;
     line-height: 1;
     margin-top: 1rem;
+}
+
+/* ===== Contact Badges ===== */
+.contact-badges {
+    display: flex;
+    gap: 1rem;
+    margin-top: -0.5rem; /* Menarik badge agar sedikit lebih dekat dengan teks di atasnya */
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 50px; /* Bentuk kapsul yang aesthetic */
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #59000A;
+    background-color: rgba(255, 255, 255, 0.7); /* Putih transparan */
+    border: 1px solid rgba(161, 119, 126, 0.4);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Mengatur ukuran ikon SVG */
+.contact-badge svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect yang elegan */
+.contact-badge:hover {
+    background-color: #59000A;
+    color: #ffffff;
+    border-color: #59000A;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(89, 0, 10, 0.15);
+}
+
+.contact-badge:hover svg {
+    transform: scale(1.1); /* Ikon membesar sedikit saat disentuh */
 }
 
 /* ===== Form & Inputs ===== */
