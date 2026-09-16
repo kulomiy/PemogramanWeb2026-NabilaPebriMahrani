@@ -362,3 +362,55 @@ footer {
         display: flex; 
     }
 }
+
+/* ===== Horizontal Photo Slider (Aesthetic) ===== */
+.photo-slider {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto; /* Membuat area bisa digeser menyamping */
+    padding-bottom: 0.75rem;
+    margin-top: 1rem;
+    scroll-snap-type: x mandatory; /* Efek snap agar foto berhenti dengan pas saat digeser */
+    scrollbar-width: thin; /* Memperkecil lebar scrollbar di Firefox */
+    scrollbar-color: #A1777E #F8F1F3; /* Warna scrollbar */
+}
+
+/* Mengatur tampilan scrollbar agar tetap manis di Chrome/Safari */
+.photo-slider::-webkit-scrollbar {
+    height: 6px;
+}
+.photo-slider::-webkit-scrollbar-track {
+    background: #F8F1F3;
+    border-radius: 10px;
+}
+.photo-slider::-webkit-scrollbar-thumb {
+    background: #A1777E;
+    border-radius: 10px;
+}
+
+.photo-card {
+    flex: 0 0 260px; /* Lebar tetap untuk setiap kartu foto */
+    height: 160px;   /* Tinggi tetap */
+    border-radius: 12px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    border: 1px solid rgba(234, 220, 224, 0.8);
+    box-shadow: 0 4px 12px rgba(161, 119, 126, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(89, 0, 10, 0.12);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan foto tidak gepeng */
+    transition: transform 0.5s ease;
+}
+
+.photo-card:hover img {
+    transform: scale(1.05); /* Efek zoom tipis saat kursor di atas foto */
+}
