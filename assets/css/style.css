@@ -1,6 +1,5 @@
 /* ===== Reset & Base ===== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap');
 * {
     box-sizing: border-box;
     margin: 0;
@@ -38,7 +37,8 @@ a {
 }
 
 .section-title {
-    font-size: 1.4rem;
+    font-family: 'Playfair Display', serif; /* Menggunakan font elegan */
+    font-size: 1.8rem;
     font-weight: 700;
     color: #59000A;
     margin-bottom: 0.3rem;
@@ -82,8 +82,10 @@ a {
 }
 
 .top-header h1 {
-    font-size: 1.6rem;
+    font-family: 'Playfair Display', serif; /* Menggunakan font elegan */
+    font-size: 2.2rem; /* Ukuran dibesarkan sedikit agar lebih tegas */
     font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .header-right {
