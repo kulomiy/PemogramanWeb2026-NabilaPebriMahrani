@@ -142,50 +142,72 @@ main {
 }
 
 /* ===== Dashboard Grid ===== */
+/* ===== Dashboard Grid (Aesthetic Update) ===== */
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    /* Mengubah jarak agar lebih lega */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem; 
+    margin-top: 1rem;
 }
 
 .dashboard-grid article {
-    background-color: #FDFBFC;
-    border: 1px solid #EADCE0;
-    border-radius: 8px;
-    padding: 1.5rem 1.5rem 1.5rem 2rem;
+    /* Background sedikit transparan untuk kesan modern (soft tint) */
+    background: linear-gradient(135deg, #ffffff 0%, #FCFAFA 100%);
+    border: 1px solid rgba(234, 220, 224, 0.6); 
+    border-radius: 16px; /* Sudut lebih membulat (kekinian) */
+    padding: 2rem 1.5rem; /* Padding lebih besar (white space) */
     position: relative;
     overflow: hidden;
-    transition: transform 0.2s ease;
+    /* Bayangan default yang sangat halus */
+    box-shadow: 0 4px 20px rgba(161, 119, 126, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Animasi lebih smooth */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+/* Hover Effect: Terangkat sedikit dengan bayangan berwarna */
 .dashboard-grid article:hover {
-    transform: translateY(-2px);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(89, 0, 10, 0.08); 
+    border-color: #D6C9C9;
 }
 
+/* Mengubah aksen garis kiri menjadi aksen titik elegan di kanan atas */
 .dashboard-grid article::before {
     content: "";
     position: absolute;
-    top: 0; left: 0; bottom: 0;
-    width: 6px;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.8;
 }
+
+/* Warna titik aksen berdasarkan urutan kartu */
 .dashboard-grid article:nth-child(1)::before { background-color: #D6C9C9; }
 .dashboard-grid article:nth-child(2)::before { background-color: #A1777E; }
 .dashboard-grid article:nth-child(3)::before { background-color: #59000A; }
-.dashboard-grid article:nth-child(4)::before { background-color: #D6C9C9; }
+.dashboard-grid article:nth-child(4)::before { background-color: #9A7B84; }
 
 .dashboard-grid article h4 {
     font-size: 0.75rem;
-    color: #A1777E;
-    margin-bottom: 1rem;
+    color: #9A7B84; /* Warna agak redup untuk memberi hierarki visual */
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 1.5px; /* Spasi huruf dilebarkan (luxury feel) */
+    font-weight: 600;
 }
 
 .dashboard-grid article p {
-    font-size: 2.2rem;
-    font-weight: 800;
+    font-family: 'Playfair Display', serif; /* Angka menggunakan font elegan */
+    font-size: 3rem; /* Angka dibesarkan signifikan */
+    font-weight: 700;
     color: #59000A;
     line-height: 1;
+    margin-top: 1rem;
 }
 
 /* ===== Form & Inputs ===== */
