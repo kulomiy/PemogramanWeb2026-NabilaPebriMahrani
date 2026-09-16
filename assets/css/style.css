@@ -104,6 +104,13 @@ a {
     font-weight: 500;
 }
 
+.header-right .address-text {
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.85; /* Sedikit transparan agar jam operasional lebih menonjol */
+    margin-top: 0.25rem; /* Memberi jarak tipis dengan jam operasional */
+}
+
 /* ===== Main Nav ===== */
 .main-nav {
     /* Warna semi-transparan putih/krem */
