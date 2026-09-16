@@ -65,11 +65,16 @@ a {
 
 /* ===== Top Header ===== */
 .top-header {
-    background-color: #59000A;
+    /* Menggabungkan background color (sebagai fallback/overlay) dan gambar */
+    /* linear-gradient digunakan sebagai overlay gelap agar teks tetap terbaca */
+    background: linear-gradient(rgba(89, 0, 10, 0.8), rgba(89, 0, 10, 0.8)), 
+                url('https://i.pinimg.com/1200x/c6/cd/44/c6cd4434b255fca5aefa50c8dc37dd87.jpg');
+    background-size: cover; /* Memastikan gambar menutupi seluruh area */
+    background-position: center; /* Memusatkan gambar */
     color: #ffffff;
     max-width: 1100px;
     margin: 2rem auto 0 auto;
-    padding: 1.5rem 2.5rem;
+    padding: 2.5rem 2.5rem; /* Padding diperbesar sedikit agar header terlihat lebih lega */
     border-radius: 12px 12px 0 0;
     display: flex;
     justify-content: space-between;
