@@ -10,7 +10,15 @@
 body {
     font-family: 'Inter', sans-serif;
     color: #4b3e3e;
-    background-color: #F8F1F3; 
+    
+    /* Warna kedua diganti ke #D6C9C9 agar lebih kontras dan gelap di bawah */
+    background: linear-gradient(to bottom, #F8F1F3, #D6C9C9);
+    
+    /* Mengunci gradasi agar selalu penuh satu layar dan tidak rusak saat di-scroll */
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
     line-height: 1.6;
 }
 
