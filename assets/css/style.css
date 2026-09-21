@@ -414,3 +414,92 @@ footer {
 .photo-card:hover img {
     transform: scale(1.05); /* Efek zoom tipis saat kursor di atas foto */
 }
+/* ===== Aesthetic Interactive Header Tabs ===== */
+.toggle-tabs {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15); /* Semi transparan kaca */
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 3px;
+    border-radius: 50px; /* Bentuk kapsul */
+    margin-bottom: 0.5rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0.7;
+    padding: 4px 12px;
+    border-radius: 50px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.tab-btn:hover {
+    opacity: 1;
+}
+
+/* Saat tombol dipilih, berubah menjadi kapsul putih bersih */
+.tab-btn.active {
+    background: #ffffff;
+    color: #59000A; /* Teks berubah jadi maroon tua */
+    opacity: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Menghilangkan garis vertikal karena sudah pakai gaya kapsul */
+.separator {
+    display: none; 
+}
+
+/* Panel Konten dengan transisi halus */
+.info-panel {
+    display: none;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.info-panel.active-panel {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header-right p {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Efek teks timbul agar makin kontras dengan foto */
+}
+
+/* ===== Header Large About Us Button ===== */
+.header-right .header-about-btn-large {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50px;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.header-right .header-about-btn-large:hover {
+    background: #ffffff;
+    color: #59000A;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
