@@ -1,0 +1,525 @@
+/* ===== Reset & Base ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #4b3e3e;
+    
+    /* 1. Base Gradient */
+    background: linear-gradient(to bottom, #F8F1F3, #D6C9C9);
+    
+    /* 2. Menambahkan tekstur butiran halus (Noise) agar tidak basic */
+    /* Menggunakan SVG data URI untuk tekstur agar ringan */
+    background-image: 
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E"),
+        linear-gradient(to bottom, #F8F1F3, #D6C9C9);
+    
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-repeat: repeat; /* Agar noise memenuhi layar */
+    
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* ===== Typography ===== */
+.subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif; /* Menggunakan font elegan */
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #59000A;
+    margin-bottom: 0.3rem;
+}
+
+.section-desc {
+    font-size: 0.95rem;
+    color: #A1777E;
+    margin-bottom: 1.5rem;
+}
+
+.sub-heading {
+    font-size: 1.1rem;
+    color: #A1777E;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background-color: #EADCE0;
+    margin: 1rem 0;
+}
+
+/* ===== Top Header ===== */
+.top-header {
+    /* Menggabungkan background color (sebagai fallback/overlay) dan gambar */
+    /* linear-gradient digunakan sebagai overlay gelap agar teks tetap terbaca */
+    background: linear-gradient(rgba(89, 0, 10, 0.8), rgba(89, 0, 10, 0.8)), 
+                url('https://i.pinimg.com/1200x/c6/cd/44/c6cd4434b255fca5aefa50c8dc37dd87.jpg');
+    background-size: cover; /* Memastikan gambar menutupi seluruh area */
+    background-position: center; /* Memusatkan gambar */
+    color: #ffffff;
+    max-width: 1100px;
+    margin: 2rem auto 0 auto;
+    padding: 2.5rem 2.5rem; /* Padding diperbesar sedikit agar header terlihat lebih lega */
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-header h1 {
+    font-family: 'Playfair Display', serif; /* Menggunakan font elegan */
+    font-size: 2.2rem; /* Ukuran dibesarkan sedikit agar lebih tegas */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.header-right {
+    text-align: right;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    padding-left: 1.5rem;
+}
+
+.header-right p {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.header-right .address-text {
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.85; /* Sedikit transparan agar jam operasional lebih menonjol */
+    margin-top: 0.25rem; /* Memberi jarak tipis dengan jam operasional */
+}
+
+/* ===== Main Nav ===== */
+.main-nav {
+    /* Warna semi-transparan putih/krem */
+    background-color: rgba(255, 255, 255, 0.4); 
+    
+    /* Efek Blur (Kaca) di belakang elemen */
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px); /* Untuk browser Safari */
+    
+    max-width: 1100px;
+    margin: 0 auto;
+    border-radius: 0 0 12px 12px;
+    padding: 1rem;
+    
+    /* Border semi-transparan putih */
+    border: 1px solid rgba(255, 255, 255, 0.6); 
+    border-top: none;
+    box-shadow: 0 8px 32px 0 rgba(161, 119, 126, 0.1);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: #59000A;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: #A1777E;
+}
+
+/* ===== Content Box ===== */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+}
+
+.content-box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+/* ===== Dashboard Grid ===== */
+.dashboard-grid {
+    display: grid;
+    /* Mengubah jarak agar lebih lega */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem; 
+    margin-top: 1rem;
+}
+
+.dashboard-grid article {
+    /* Background sedikit transparan untuk kesan modern (soft tint) */
+    background: linear-gradient(135deg, #ffffff 0%, #FCFAFA 100%);
+    border: 1px solid rgba(234, 220, 224, 0.6); 
+    border-radius: 16px; /* Sudut lebih membulat (kekinian) */
+    padding: 2rem 1.5rem; /* Padding lebih besar (white space) */
+    position: relative;
+    overflow: hidden;
+    /* Bayangan default yang sangat halus */
+    box-shadow: 0 4px 20px rgba(161, 119, 126, 0.05);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Animasi lebih smooth */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Hover Effect: Terangkat sedikit dengan bayangan berwarna */
+.dashboard-grid article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(89, 0, 10, 0.08); 
+    border-color: #D6C9C9;
+}
+
+/* Mengubah aksen garis kiri menjadi aksen titik elegan di kanan atas */
+.dashboard-grid article::before {
+    content: "";
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+/* Warna titik aksen berdasarkan urutan kartu */
+.dashboard-grid article:nth-child(1)::before { background-color: #D6C9C9; }
+.dashboard-grid article:nth-child(2)::before { background-color: #A1777E; }
+.dashboard-grid article:nth-child(3)::before { background-color: #59000A; }
+.dashboard-grid article:nth-child(4)::before { background-color: #9A7B84; }
+
+.dashboard-grid article h4 {
+    font-size: 0.75rem;
+    color: #9A7B84; /* Warna agak redup untuk memberi hierarki visual */
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Spasi huruf dilebarkan (luxury feel) */
+    font-weight: 600;
+}
+
+.dashboard-grid article p {
+    font-family: 'Playfair Display', serif; /* Angka menggunakan font elegan */
+    font-size: 3rem; /* Angka dibesarkan signifikan */
+    font-weight: 700;
+    color: #59000A;
+    line-height: 1;
+    margin-top: 1rem;
+}
+
+/* ===== Contact Badges ===== */
+.contact-badges {
+    display: flex;
+    gap: 1rem;
+    margin-top: -0.5rem; /* Menarik badge agar sedikit lebih dekat dengan teks di atasnya */
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.contact-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 50px; /* Bentuk kapsul yang aesthetic */
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #59000A;
+    background-color: rgba(255, 255, 255, 0.7); /* Putih transparan */
+    border: 1px solid rgba(161, 119, 126, 0.4);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Mengatur ukuran ikon SVG */
+.contact-badge svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect yang elegan */
+.contact-badge:hover {
+    background-color: #59000A;
+    color: #ffffff;
+    border-color: #59000A;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(89, 0, 10, 0.15);
+}
+
+.contact-badge:hover svg {
+    transform: scale(1.1); /* Ikon membesar sedikit saat disentuh */
+}
+
+/* ===== Form & Inputs ===== */
+form .form-group { margin-bottom: 1.25rem; }
+form label { display: block; margin-bottom: 0.5rem; font-weight: 600; color: #59000A; font-size: 0.95rem; }
+form input, form select, form textarea {
+    width: 100%; padding: 0.75rem 1rem; border: 1px solid #EADCE0; border-radius: 8px; font-size: 0.95rem; color: #59000A; background-color: #F8F1F3; outline: none;
+}
+form input:focus, form select:focus, form textarea:focus { border-color: #A1777E; background-color: #ffffff; }
+
+form button[type="submit"], .btn-tambah {
+    background-color: #59000A; color: #ffffff; border: none; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; display: inline-block; transition: 0.3s;
+}
+form button[type="submit"]:hover, .btn-tambah:hover {
+    background-color: #A1777E;
+}
+
+/* ===== Table ===== */
+.table-responsive { overflow-x: auto; margin-top: 1rem; }
+table { width: 100%; border-collapse: collapse; }
+thead { background-color: #F8F1F3; }
+th, td { padding: 1rem; border-bottom: 1px solid #EADCE0; text-align: left; font-size: 0.95rem; }
+th { color: #59000A; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+tbody tr:hover { background-color: #FDFBFC; }
+.badge { padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; background-color: #EADCE0; color: #59000A;}
+.btn-aksi { padding: 0.3rem 0.8rem; border-radius: 4px; border: none; font-size: 0.8rem; background-color: #F8F1F3; color: #59000A; cursor: pointer; transition: 0.2s;}
+.btn-aksi:hover { background-color: #EADCE0; }
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 4rem;
+    color: #A1777E;
+    font-size: 0.9rem;
+}
+
+/* ===== Hamburger Menu & Mobile Responsive ===== */
+/* Sembunyikan checkbox dan tombol hamburger di layar besar (Desktop) */
+.nav-toggle, .nav-toggle-label {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .top-header { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 1rem; 
+        padding: 1.5rem; 
+        margin-top: 0; 
+        border-radius: 0; 
+    }
+    .header-right { 
+        border-left: none; 
+        padding-left: 0; 
+        text-align: center; 
+        border-top: 1px solid rgba(255, 255, 255, 0.2); 
+        padding-top: 1rem; 
+    }
+    .main-nav { 
+        border-radius: 0; 
+    }
+    
+    /* Perbaikan: Paksa tombol menu ke kanan dengan display block */
+    .nav-toggle-label {
+        display: block;
+        text-align: left;
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #59000A;
+        cursor: pointer;
+    }
+
+    .main-nav ul { 
+        display: none; 
+        flex-direction: column; 
+        gap: 1rem; 
+        text-align: center; 
+        margin-top: 1rem; 
+        padding-top: 1rem; 
+        border-top: 1px solid #D6C9C9; 
+    }
+    .nav-toggle:checked ~ ul { 
+        display: flex; 
+    }
+}
+
+/* ===== Horizontal Photo Slider (Aesthetic) ===== */
+.photo-slider {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto; /* Membuat area bisa digeser menyamping */
+    padding-bottom: 0.75rem;
+    margin-top: 1rem;
+    scroll-snap-type: x mandatory; /* Efek snap agar foto berhenti dengan pas saat digeser */
+    scrollbar-width: thin; /* Memperkecil lebar scrollbar di Firefox */
+    scrollbar-color: #A1777E #F8F1F3; /* Warna scrollbar */
+}
+
+/* Mengatur tampilan scrollbar agar tetap manis di Chrome/Safari */
+.photo-slider::-webkit-scrollbar {
+    height: 6px;
+}
+.photo-slider::-webkit-scrollbar-track {
+    background: #F8F1F3;
+    border-radius: 10px;
+}
+.photo-slider::-webkit-scrollbar-thumb {
+    background: #A1777E;
+    border-radius: 10px;
+}
+
+.photo-card {
+    flex: 0 0 260px; /* Lebar tetap untuk setiap kartu foto */
+    height: 160px;   /* Tinggi tetap */
+    border-radius: 12px;
+    overflow: hidden;
+    scroll-snap-align: start;
+    border: 1px solid rgba(234, 220, 224, 0.8);
+    box-shadow: 0 4px 12px rgba(161, 119, 126, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(89, 0, 10, 0.12);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan foto tidak gepeng */
+    transition: transform 0.5s ease;
+}
+
+.photo-card:hover img {
+    transform: scale(1.05); /* Efek zoom tipis saat kursor di atas foto */
+}
+/* ===== Aesthetic Interactive Header Tabs ===== */
+.toggle-tabs {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15); /* Semi transparan kaca */
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 3px;
+    border-radius: 50px; /* Bentuk kapsul */
+    margin-bottom: 0.5rem;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0.7;
+    padding: 4px 12px;
+    border-radius: 50px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.tab-btn:hover {
+    opacity: 1;
+}
+
+/* Saat tombol dipilih, berubah menjadi kapsul putih bersih */
+.tab-btn.active {
+    background: #ffffff;
+    color: #59000A; /* Teks berubah jadi maroon tua */
+    opacity: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Menghilangkan garis vertikal karena sudah pakai gaya kapsul */
+.separator {
+    display: none; 
+}
+
+/* Panel Konten dengan transisi halus */
+.info-panel {
+    display: none;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.info-panel.active-panel {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.header-right p {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Efek teks timbul agar makin kontras dengan foto */
+}
+
+/* ===== Header Large About Us Button ===== */
+.header-right .header-about-btn-large {
+    display: inline-block;
+    padding: 0.6rem 1.4rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50px;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.header-right .header-about-btn-large:hover {
+    background: #ffffff;
+    color: #59000A;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Flash message Jobsheet 7 */
+.flash-message {
+    padding: 0.9rem 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.flash-message.success {
+    background-color: #efe5e5;
+    color: #4a121a;
+    border: 1px solid #eadce0;
+}
+
+.flash-message.error {
+    background-color: #fce4e4;
+    color: #5c1d24;
+    border: 1px solid #eadce0;
+}
