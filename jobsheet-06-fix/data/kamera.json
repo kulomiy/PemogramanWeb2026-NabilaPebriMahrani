@@ -1,0 +1,32 @@
+[
+  {
+    "nama_alat": "Alpha A7 Mark III",
+    "merek": "Sony",
+    "tahun_beli": 2021,
+    "stok": 4
+  },
+  {
+    "nama_alat": "EOS R6 Mark II",
+    "merek": "Canon",
+    "tahun_beli": 2023,
+    "stok": 2
+  },
+  {
+    "nama_alat": "Fujifilm X-T4",
+    "merek": "Fujifilm",
+    "tahun_beli": 2022,
+    "stok": 3
+  },
+  {
+    "nama_alat": "Lensa FE 24-70mm f/2.8",
+    "merek": "Sony",
+    "tahun_beli": 2020,
+    "stok": 0
+  },
+  {
+    "nama_alat": "DJI Ronin-SC",
+    "merek": "DJI",
+    "tahun_beli": 2022,
+    "stok": 5
+  }
+]

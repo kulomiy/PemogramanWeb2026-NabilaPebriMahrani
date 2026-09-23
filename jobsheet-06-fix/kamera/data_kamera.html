@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CamRent | Data Alat</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-header">
+        <div class="header-left">
+            <span class="subtitle">SISTEM MANAJEMEN RENTAL</span>
+            <h1>CamRent Studio</h1>
+        </div>
+        <div class="header-right" style="border-left: none; padding-left: 0;">
+            <a href="../about.html" class="header-about-btn-large">ABOUT US ↗</a>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776; Menu</label>
+        <ul>
+            <li><a href="../index.html">Dashboard</a></li>
+            <li><a href="data_kamera.html" class="active">Data Kamera</a></li>
+            <li><a href="tambah_kamera.html">Tambah Kamera</a></li>
+            <li><a href="../pelanggan/data_pelanggan.html">Data Pelanggan</a></li>
+            <li><a href="../pelanggan/tambah_pelanggan.html">Tambah Pelanggan</a></li>
+            <li><a href="../login.html">Keluar</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="content-box">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h2 class="section-title">Daftar Alat & Kamera</h2>
+                <a href="tambah_kamera.html" class="btn-tambah">+ Tambah Alat</a>
+            </div>
+            <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>NAMA ALAT</th>
+                        <th>MEREK</th>
+                        <th>TAHUN BELI</th>
+                        <th>STOK</th>
+                        <th>AKSI</th>
+                    </tr>
+                </thead>
+                <tbody id="kamera-table-body">
+                    <!-- Data otomatis diisi oleh main.js dari kamera.json -->
+                </tbody>
+            </table>
+             <p id="kamera-counter" style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: #A1777E;"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CamRent — Sistem Rental Kamera</p>
+    </footer>
+
+    <!-- CUKUP PANGGUL MAIN.JS SAJA -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

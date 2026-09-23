@@ -1,0 +1,30 @@
+[
+  {
+    "id_reg": "P-001",
+    "nama_lengkap": "Ahmad Fauzi",
+    "no_ktp": "357301234567",
+    "no_hp": "08123456789",
+    "status": "Terverifikasi"
+  },
+  {
+    "id_reg": "P-002",
+    "nama_lengkap": "Siti Nurhaliza",
+    "no_ktp": "357309876543",
+    "no_hp": "08198765432",
+    "status": "Proses Cek"
+  },
+  {
+    "id_reg": "P-003",
+    "nama_lengkap": "Budi Santoso",
+    "no_ktp": "357311223344",
+    "no_hp": "08571234567",
+    "status": "Terverifikasi"
+  },
+  {
+    "id_reg": "P-004",
+    "nama_lengkap": "Dewi Lestari",
+    "no_ktp": "357322334455",
+    "no_hp": "08219876543",
+    "status": "Terverifikasi"
+  }
+]

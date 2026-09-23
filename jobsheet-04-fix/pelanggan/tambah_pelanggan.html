@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CamRent | Tambah Pelanggan</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-header">
+        <div class="header-left">
+            <span class="subtitle">SISTEM MANAJEMEN RENTAL</span>
+            <h1>CamRent Studio</h1>
+        </div>
+        <div class="header-right" style="border-left: none; padding-left: 0;">
+            <a href="../about.html" class="header-about-btn-large">ABOUT US ↗</a>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776; Menu</label>
+        <ul>
+            <li><a href="../index.html">Dashboard</a></li>
+            <li><a href="../kamera/data_kamera.html">Data Kamera</a></li>
+            <li><a href="../kamera/tambah_kamera.html">Tambah Kamera</a></li>
+            <li><a href="data_pelanggan.html">Data Pelanggan</a></li>
+            <li><a href="tambah_pelanggan.html" class="active">Tambah Pelanggan</a></li>
+            <li><a href="../login.html">Keluar</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="content-box">
+            <h2 class="section-title">Registrasi Pelanggan Baru</h2>
+            <hr class="divider">
+            <form style="max-width: 600px; margin-top: 1.5rem;">
+                <div class="form-group">
+                    <label for="id_reg">ID Registrasi</label>
+                    <input type="text" id="id_reg" name="id_reg" value="P-003" readonly style="background-color: #e2e8f0; cursor: not-allowed;">
+                </div>
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap Sesuai KTP</label>
+                    <input type="text" id="nama" name="nama" required>
+                </div>
+                <div class="form-group">
+                    <label for="no_ktp">Nomor Identitas (KTP/SIM)</label>
+                    <input type="number" id="no_ktp" name="no_ktp" required>
+                </div>
+                <div class="form-group">
+                    <label for="no_wa">Nomor HP (WhatsApp)</label>
+                    <input type="tel" id="no_wa" name="no_wa" placeholder="Contoh: 0812..." required>
+                </div>
+                <div class="form-group">
+                    <label for="alamat">Alamat Domisili</label>
+                    <textarea id="alamat" name="alamat" rows="2" required></textarea>
+                </div>
+                <button type="submit" style="margin-top: 1rem;">Simpan Data Pelanggan</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CamRent — Sistem Rental Kamera</p>
+    </footer>
+</body>
+</html>

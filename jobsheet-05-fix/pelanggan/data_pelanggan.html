@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CamRent | Data Pelanggan</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header class="top-header">
+        <div class="header-left">
+            <span class="subtitle">SISTEM MANAJEMEN RENTAL</span>
+            <h1>CamRent Studio</h1>
+        </div>
+        <div class="header-right" style="border-left: none; padding-left: 0;">
+            <a href="../about.html" class="header-about-btn-large">ABOUT US ↗</a>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776; Menu</label>
+        <ul>
+            <li><a href="../index.html">Dashboard</a></li>
+            <li><a href="../kamera/data_kamera.html">Data Kamera</a></li>
+            <li><a href="../kamera/tambah_kamera.html">Tambah Kamera</a></li>
+            <li><a href="data_pelanggan.html" class="active">Data Pelanggan</a></li>
+            <li><a href="tambah_pelanggan.html">Tambah Pelanggan</a></li>
+            <li><a href="../login.html">Keluar</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="content-box">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h2 class="section-title">Daftar Pelanggan</h2>
+                <a href="tambah_pelanggan.html" class="btn-tambah">+ Registrasi Pelanggan</a>
+            </div>
+            <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID REG</th>
+                        <th>NAMA LENGKAP</th>
+                        <th>NO. KTP</th>
+                        <th>NO. HP (WA)</th>
+                        <th>STATUS</th>
+                        <th>AKSI</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>P-001</td>
+                        <td>Ahmad Fauzi</td>
+                        <td>357301234567</td>
+                        <td>08123456789</td>
+                        <td><span class="badge">Terverifikasi</span></td>
+                        <td>
+                            <button class="btn-aksi">Edit</button>
+                            <button class="btn-aksi">Hapus</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>P-002</td>
+                        <td>Siti Nurhaliza</td>
+                        <td>357309876543</td>
+                        <td>08198765432</td>
+                        <td><span class="badge" style="background-color: #f7dcdb;">Proses Cek</span></td>
+                        <td>
+                            <button class="btn-aksi">Edit</button>
+                            <button class="btn-aksi">Hapus</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>P-003</td>
+                        <td>Budi Santoso</td>
+                        <td>357311223344</td>
+                        <td>08571234567</td>
+                        <td><span class="badge">Terverifikasi</span></td>
+                        <td>
+                            <button class="btn-aksi">Edit</button>
+                            <button class="btn-aksi">Hapus</button>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>P-004</td>
+                        <td>Dewi Lestari</td>
+                        <td>357322334455</td>
+                        <td>08219876543</td>
+                        <td><span class="badge">Terverifikasi</span></td>
+                        <td>
+                            <button class="btn-aksi">Edit</button>
+                            <button class="btn-aksi">Hapus</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+             <p style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: #A1777E;">Menampilkan 4 dari 156 Total Pelanggan</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CamRent — Sistem Rental Kamera</p>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
