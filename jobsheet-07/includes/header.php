@@ -3,12 +3,8 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Logika dinamis untuk mendeteksi jalur folder dasar proyek Anda secara akurat
-$currentScript = $_SERVER['SCRIPT_NAME']; 
-$scriptDir = dirname($currentScript);
-
 // Memastikan base url fleksibel baik diakses dari folder utama maupun subfolder
-if ($scriptDir === '/Prak-PemrogWeb/jobsheet-07' || $scriptDir === '/Prak-PemrogWeb/jobsheet-07/') {
+if (file_exists('includes/header.php') || (isset($_SERVER['SCRIPT_FILENAME']) && realpath(dirname($_SERVER['SCRIPT_FILENAME'])) === realpath(__DIR__ . '/..'))) {
     $baseUrl = './';
 } else {
     $baseUrl = '../';
@@ -31,7 +27,11 @@ if ($scriptDir === '/Prak-PemrogWeb/jobsheet-07' || $scriptDir === '/Prak-Pemrog
         </div>
 
         <div class="header-right" style="border-left: none; padding-left: 0;">
-            <a href="<?= $baseUrl ?>about.php" class="header-about-btn-large">ABOUT US ↗</a>
+            <?php if (basename($_SERVER['SCRIPT_NAME']) === 'about.php' || (isset($isAboutPage) && $isAboutPage)): ?>
+                <a href="<?= $baseUrl ?>index.php" class="header-about-btn-large">← DASHBOARD</a>
+            <?php else: ?>
+                <a href="<?= $baseUrl ?>about.php" class="header-about-btn-large">ABOUT US ↗</a>
+            <?php endif; ?>
         </div>
     </header>
 
@@ -42,7 +42,7 @@ if ($scriptDir === '/Prak-PemrogWeb/jobsheet-07' || $scriptDir === '/Prak-Pemrog
             <span>☰ Menu</span>
         </label>
         <ul>
-            <!-- Link menu otomatis menyesuaikan posisi file secara dinamis -->
+            <!-- Link menu diperbaiki dengan menghapus penulisan folder ganda -->
             <li><a href="<?= $baseUrl ?>index.php">Dashboard</a></li>
             <li><a href="<?= $baseUrl ?>kamera/list.php">Data Kamera</a></li>
             <li><a href="<?= $baseUrl ?>kamera/tambah.php">Tambah Kamera</a></li>
@@ -52,3 +52,5 @@ if ($scriptDir === '/Prak-PemrogWeb/jobsheet-07' || $scriptDir === '/Prak-Pemrog
         </ul>
     </nav>
     <?php endif; ?>
+</body>
+</html>

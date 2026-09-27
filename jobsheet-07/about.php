@@ -1,6 +1,7 @@
 <?php
 $pageTitle = '<title>CamRent | About Us</title>';
 $showNav = false;
+$isAboutPage = true;
 include 'includes/header.php';
 ?>
 <main>
