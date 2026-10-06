@@ -1,0 +1,42 @@
+[
+  {
+    "nama_alat": "Alpha A7 Mark III",
+    "merek": "Sony",
+    "tahun_beli": 2021,
+    "sn": "SN-SNY-001",
+    "stok": 4,
+    "kategori": "mirrorless"
+  },
+  {
+    "nama_alat": "EOS R6 Mark II",
+    "merek": "Canon",
+    "tahun_beli": 2023,
+    "sn": "SN-CAN-002",
+    "stok": 2,
+    "kategori": "mirrorless"
+  },
+  {
+    "nama_alat": "Fujifilm X-T4",
+    "merek": "Fujifilm",
+    "tahun_beli": 2022,
+    "sn": "SN-FUJ-003",
+    "stok": 3,
+    "kategori": "mirrorless"
+  },
+  {
+    "nama_alat": "Lensa FE 24-70mm f/2.8",
+    "merek": "Sony",
+    "tahun_beli": 2020,
+    "sn": "SN-LNS-004",
+    "stok": 0,
+    "kategori": "lensa"
+  },
+  {
+    "nama_alat": "DJI Ronin-SC",
+    "merek": "DJI",
+    "tahun_beli": 2022,
+    "sn": "SN-DJI-005",
+    "stok": 5,
+    "kategori": "aksesoris"
+  }
+]
